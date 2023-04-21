@@ -1,0 +1,15 @@
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureEvaluator\bin\Debug\net7.0\SignatureEvaluator.deps.json
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureEvaluator\bin\Debug\net7.0\SignatureEvaluator.dll
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureEvaluator\bin\Debug\net7.0\SignatureEvaluator.pdb
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureEvaluator\bin\Debug\net7.0\SignatureModels.dll
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureEvaluator\bin\Debug\net7.0\SignatureModels.pdb
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureEvaluator\obj\Debug\net7.0\SignatureEvaluator.csproj.AssemblyReference.cache
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureEvaluator\obj\Debug\net7.0\SignatureEvaluator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureEvaluator\obj\Debug\net7.0\SignatureEvaluator.AssemblyInfoInputs.cache
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureEvaluator\obj\Debug\net7.0\SignatureEvaluator.AssemblyInfo.cs
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureEvaluator\obj\Debug\net7.0\SignatureEvaluator.csproj.CoreCompileInputs.cache
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureEvaluator\obj\Debug\net7.0\SignatureEvaluator.csproj.CopyComplete
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureEvaluator\obj\Debug\net7.0\SignatureEvaluator.dll
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureEvaluator\obj\Debug\net7.0\refint\SignatureEvaluator.dll
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureEvaluator\obj\Debug\net7.0\SignatureEvaluator.pdb
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureEvaluator\obj\Debug\net7.0\ref\SignatureEvaluator.dll

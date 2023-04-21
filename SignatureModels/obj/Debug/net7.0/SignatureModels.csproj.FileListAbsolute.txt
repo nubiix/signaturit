@@ -1,0 +1,12 @@
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureModels\bin\Debug\net7.0\SignatureModels.deps.json
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureModels\bin\Debug\net7.0\SignatureModels.dll
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureModels\bin\Debug\net7.0\SignatureModels.pdb
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureModels\obj\Debug\net7.0\SignatureModels.csproj.AssemblyReference.cache
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureModels\obj\Debug\net7.0\SignatureModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureModels\obj\Debug\net7.0\SignatureModels.AssemblyInfoInputs.cache
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureModels\obj\Debug\net7.0\SignatureModels.AssemblyInfo.cs
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureModels\obj\Debug\net7.0\SignatureModels.csproj.CoreCompileInputs.cache
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureModels\obj\Debug\net7.0\SignatureModels.dll
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureModels\obj\Debug\net7.0\refint\SignatureModels.dll
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureModels\obj\Debug\net7.0\SignatureModels.pdb
+C:\Users\Romel\source\repos\Romel_Signaturit\SignatureModels\obj\Debug\net7.0\ref\SignatureModels.dll

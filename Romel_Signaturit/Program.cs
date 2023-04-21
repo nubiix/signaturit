@@ -1,9 +1,20 @@
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using SignatureEvaluatorService.Interfaces;
+using SignatureModels.Models;
+using System.Security.Cryptography.Xml;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.Configure<Roles>(builder.Configuration.GetSection("Roles"));
+builder.Services.Configure<Resources>(builder.Configuration.GetSection("Resources"));
+// todo
+builder.Services.AddSingleton<ISignatureEvaluatorService, SignatureEvaluatorService.SignatureEvaluatorService>();
 
 var app = builder.Build();
 
@@ -16,29 +27,20 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
+app.MapGet("/EvaluateSignature/{plaintiff}/{defendant}", (ISignatureEvaluatorService Evaluator, string plaintiff, string defendant) =>
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast = Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
+    return Evaluator.EvaluateSignature(new SignatureRequest(plaintiff, defendant));
 })
-.WithName("GetWeatherForecast")
+.Produces<SignatureResponse>()
+.WithName("EvaluateSignature")
+.WithOpenApi();
+
+app.MapGet("/SignatureRequirementResponse/{plaintiff}/{defendant}", (ISignatureEvaluatorService Evaluator, string plaintiff, string defendant) =>
+{
+    return Evaluator.EvaluateSignatureRequirement(new SignatureRequest(plaintiff, defendant));
+})
+.Produces<SignatureRequirementResponse>()
+.WithName("SignatureRequirementResponse")
 .WithOpenApi();
 
 app.Run();
-
-internal record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
