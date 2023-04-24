@@ -13,6 +13,7 @@ namespace SignatureModels.Models
     {
         public string Sign { get; set; }
         public int Rating { get; set; }
+        public User() { }
         public User(string _sign) => Sign = _sign;
         public void SetRating(int _rating) => Rating = _rating;
         public string GetSign() => Sign;

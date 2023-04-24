@@ -9,6 +9,7 @@ namespace SignatureModels.Models
     public class SignatureBase
     {
         public SignatureGroup ImplicatedParts { get; set; }
+        public SignatureBase() { }
         public SignatureBase(string _plaintiff, string _defendant) => ImplicatedParts = new SignatureGroup(_plaintiff, _defendant);
         public void setRatingImplicatedParts(int ratingPlaintinff, int ratingDefendant)
         {

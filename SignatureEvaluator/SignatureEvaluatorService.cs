@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Options;
-using SignatureEvaluatorService.Interfaces;
+using SignatureEvaluator.Interfaces;
 using SignatureModels.Models;
 using System.Net.WebSockets;
 
-namespace SignatureEvaluatorService
+namespace SignatureEvaluator
 {
     public class SignatureEvaluatorService : ISignatureEvaluatorService
     {

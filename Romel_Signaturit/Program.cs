@@ -1,24 +1,18 @@
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using SignatureEvaluatorService.Interfaces;
+using SignatureEvaluator;
+using SignatureEvaluator.Interfaces;
 using SignatureModels.Models;
-using System.Security.Cryptography.Xml;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.Configure<Roles>(builder.Configuration.GetSection("Roles"));
 builder.Services.Configure<Resources>(builder.Configuration.GetSection("Resources"));
 // todo
-builder.Services.AddSingleton<ISignatureEvaluatorService, SignatureEvaluatorService.SignatureEvaluatorService>();
+builder.Services.AddSingleton<ISignatureEvaluatorService, SignatureEvaluatorService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -27,7 +21,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/EvaluateSignature/{plaintiff}/{defendant}", (ISignatureEvaluatorService Evaluator, string plaintiff, string defendant) =>
+app.MapGet("/EvaluateSignature/{plaintiff}/{defendant}",(ISignatureEvaluatorService Evaluator, string plaintiff, string defendant) =>
 {
     return Evaluator.EvaluateSignature(new SignatureRequest(plaintiff, defendant));
 })

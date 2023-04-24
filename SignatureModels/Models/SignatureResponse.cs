@@ -10,7 +10,8 @@ namespace SignatureModels.Models
     public class SignatureResponse: SignatureBase
     {
         public string Winner { get; set; }
-        public void SetWinner(string _winner) => Winner = _winner;        
+        public void SetWinner(string _winner) => Winner = _winner;
+        public SignatureResponse(){}
         public SignatureResponse(string _plaintiff, string _defendant) : base(_plaintiff, _defendant) { }
         public override string ToString()
         {

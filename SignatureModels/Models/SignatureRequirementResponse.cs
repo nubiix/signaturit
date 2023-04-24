@@ -10,6 +10,7 @@ namespace SignatureModels.Models
     {
         public string SignatureRequirement { get; set; }
         public void SetRequirements(string _signatureRequirement) => SignatureRequirement = _signatureRequirement;
+        public SignatureRequirementResponse() { }
         public SignatureRequirementResponse(string _plaintiff, string _defendant) : base(_plaintiff, _defendant) { }
     }
 }

@@ -10,6 +10,7 @@ namespace SignatureModels.Models
     {
         public User Plaintiff { get; set; }
         public User Defendant { get; set; }
+        public SignatureGroup() { }
         public SignatureGroup(string _plaintiff, string _defendant)
         {
             Plaintiff = new User(_plaintiff);

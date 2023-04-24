@@ -1,6 +1,6 @@
 ﻿using SignatureModels.Models;
 
-namespace SignatureEvaluatorService.Interfaces
+namespace SignatureEvaluator.Interfaces
 {
     public interface ISignatureEvaluatorService
     {
