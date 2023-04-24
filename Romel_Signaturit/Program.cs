@@ -8,7 +8,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.Configure<Roles>(builder.Configuration.GetSection("Roles"));
 builder.Services.Configure<Resources>(builder.Configuration.GetSection("Resources"));
-// todo
+
 builder.Services.AddSingleton<ISignatureEvaluatorService, SignatureEvaluatorService>();
 
 var app = builder.Build();
@@ -34,7 +34,7 @@ app.MapGet("/SignatureRequirementResponse/{plaintiff}/{defendant}", (ISignatureE
     return Evaluator.EvaluateSignatureRequirement(new SignatureRequest(plaintiff, defendant));
 })
 .Produces<SignatureRequirementResponse>()
-.WithName("SignatureRequirementResponse")
+.WithName("SignatureRequirement")
 .WithOpenApi();
 
 app.Run();
