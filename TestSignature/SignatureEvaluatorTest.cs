@@ -1,10 +1,8 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
-using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities.Resources;
 using Newtonsoft.Json;
 using SignatureEvaluator;
 using SignatureModels.Models;
-using System.Reflection;
 using Resources = SignatureModels.Models.Resources;
 
 namespace TestSignature
